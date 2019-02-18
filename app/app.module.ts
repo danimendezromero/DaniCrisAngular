@@ -11,6 +11,7 @@ import { ActesComponent } from './components/actes/actes.component';
 import { ActeComponent } from './components/acte/acte.component';
 import { GroupComponent } from './components/group/group.component';
 import { AddacteComponent } from './components/addacte/addacte.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AddacteComponent } from './components/addacte/addacte.component';
     ActesComponent,
     ActeComponent,
     GroupComponent,
-    AddacteComponent
+    AddacteComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
