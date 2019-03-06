@@ -15,9 +15,9 @@ const routes: Routes = [
   {path:'acte/:id',component: ActeComponent},
   {path:'actes',component: ActesComponent},
   {path:'login',component: LoginComponent},
-  {path:'login',component: LoginComponent},
   {path:'addacte',component: AddacteComponent},
   {path:'group',component: GroupComponent},
+  {path:'addacte', component: AddacteComponent },
   {path: '**', component: NotFoundComponent }
 
 

@@ -1,3 +1,46 @@
-<p>
-  addacte works!
-</p>
+<app-navbar></app-navbar>
+<!--
+Crear actos
+ -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+      .addacte {
+        margin-top: 50px;
+      }
+      body {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="col-md-5 offset-md-4 addacte">
+
+    <form (submit)="onSubmit()">
+      nom grup<br>
+      <input class="form-control" type="text" [(ngModel)]="nomgrup" name="ngrup">
+      <br>
+      integrants<br>
+      <input class="form-control" type="number" [(ngModel)]="integrants" name="integrant">
+      <br>
+      hora inici<br>
+      <input  class="form-control" type="text" [(ngModel)]="hora_inici" name="horainici">
+      <br>
+      hora fi:<br>
+      <input class="form-control" type="text" [(ngModel)]="hora_fi" name="horafi">
+      <br>
+      grup:<br>
+      <input class="form-control" type="text" [(ngModel)]="grup" name="group">
+      <br><br>
+      <input class="form-control btn-primary" type="submit" value="Submit">
+    </form>
+    <br>
+    <button class="btn btn-primary" type="button" (click)="backClicked()" name="button">Back</button>
+
+    </div>
+
+  </body>
+</html>

@@ -1,2 +1,11 @@
-
-  <button (click)="desloguearse()" type="button" name="button">Logout</button>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="div-logout" *ngIf="checkLogin==true">
+      <button class="btn btn-primary col-md-1 offset-md-10" (click)="desloguearse()" type="button" name="button" style="margin-top: 20px;">Logout</button>
+    </div>
+  </body>
+</html>

@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+import { Acte } from '../clases/acte';
+import { Group } from '../clases/group';
+
 
 @Component({
   selector: 'app-group',
@@ -6,8 +11,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./group.component.css']
 })
 export class GroupComponent implements OnInit {
-
-  constructor() { }
+  @Input() group: Group;
+  constructor(  private route: ActivatedRoute,
+    private router: Router) {
+  }
 
   ngOnInit() {
   }

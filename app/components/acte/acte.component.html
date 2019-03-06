@@ -1,5 +1,25 @@
-<h1>{{ acte.nom }}</h1>
-<input type="text" [(ngModel)]="acte.id">
+<app-navbar></app-navbar>
+<!--
+Aqui priintamos el grupo desde su componente importandolo a partir del componente.
+Y realizamos la edicion.
+-->
+<div class="col-md-4 offset-md-4" *ngIf="acte" >
+
+<app-group [group]="acte.group"></app-group>
+
+<form>
+  <div class="" style="margin-top: 20px; margin-bottom: 20px; margin-left: 13px;">
+    <span type="text">{{acte.numero}}</span>
+  </div>
+
+  <input class="form-control" type="text" [(ngModel)]="acte.hora_inici" name="hora_inici">
+  <br>
+  <input class="form-control" type="text" [(ngModel)]="acte.hora_fi" name="hora_fi">
+  <br>
+  <button class="btn btn-primary col-md-12" type="button" name="button" (click)="editaracte();">Editar Acto + grupo</button>
+</form>
 <br>
-<br>
-<input type="text" [(ngModel)]="acte.hora_inici">
+<button class="btn btn-primary" type="button" (click)="backClicked()" name="button">Back</button>
+
+
+</div>

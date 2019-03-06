@@ -1,31 +1,39 @@
 <!-- <app-login></app-login> -->
-<h1>
-  Actes
-</h1>
-<table style="border: solid 2px;">
-  <thead>
-    <th>Hora inici</th>
-    <th>Hora fin</th>
-    <th>Group</th>
-  </thead>
-  <tbody>
-    <td *ngFor="let a of actes; let idx=index" (click)="enviarActe(a)">
-      <a routerLink="/acte/{{idx}}">{{ a.hora_inici }}</a>
-    </td>
-    <td *ngFor="let a of actes; let idx=index" (click)="enviarActe(a)">
-      <a routerLink="/acte/{{idx}}">{{ a.hora_fi }}</a>
-    </td>
-    <td *ngFor="let a of actes; let idx=index" (click)="enviarActe(a)">
-      <a routerLink="/acte/{{idx}}">{{ a.group.nom }}</a>
-    </td>
-  </tbody>
-</table>
-<!-- <ul>
-  <li *ngFor="let a of actes; let idx=index" (click)="enviarActe(a)">
-  </li>
-</ul> -->
+<app-navbar></app-navbar>
 
-<table>
 
-</table>
-<hr>
+<!--
+Printar todos los actos
+ -->
+<div class="col-md-8 offset-md-2">
+  <h1>
+    Actes
+  </h1>
+  <table class="table">
+    <thead>
+      <th>Numero</th>
+      <th>Fecha inici</th>
+      <th>Fecha final</th>
+      <th>Nom group</th>
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of items; let idx=index" (click)="enviarActe(a)">
+        <td>
+          <a routerLink="/acte/{{idx}}">{{ a.numero }}</a>
+        </td>
+        <td>
+          <p >{{ a.hora_inici }}</p>
+        </td>
+        <td>
+          <p >{{ a.hora_fi }}</p>
+        </td>
+        <td>
+          <a routerLink="/acte/{{idx}}">{{ a.group.nom }}</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary" type="button" name="button" (click)="btnClick();">Nou acte</button>
+  <hr>
+</div>

@@ -13,6 +13,8 @@ export class LoginComponent implements OnInit {
   username:string;
   pass:string;
 
+  checkLogin:boolean;
+
   constructor(
     private route: ActivatedRoute,
     private router: Router
@@ -20,9 +22,22 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.checkLogin = false;
+  }
+
+  ngDoCheck(){
+    // si esta en el localStorage checkLogin true,
+    const login = JSON.parse(localStorage.getItem('login'));
+    if(!login || login.username == null){
+
+    } else {
+      this.checkLogin = true;
+
+    }
   }
 
   loguearse(){
+    //crear un storage al logearse
     console.log(this.username, this.pass);
     const login = {
       username: this.username,
